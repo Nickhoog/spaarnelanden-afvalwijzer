@@ -51,3 +51,4 @@
 - v0.1.2: integratienaam (manifest + hacs.json + README) op verzoek gebruiker gewijzigd naar 'Spaarnelanden - Afvalwijzer'. 71 tests groen.
 - v0.1.3: hacs-bot eiste dat 'HACS' niet in de reponaam staat → repo hernoemd naar Nickhoog/spaarnelanden-afvalwijzer (keuze gebruiker); URLs in manifest/README en projectnaam aangepast.
 - HACS-aanmelding: PR https://github.com/hacs/default/pull/12260 (na akkoord gebruiker). Na hernoemen: alle 13 HACS-checks geslaagd, label 'New default repository', in de wachtrij voor review. Niet reageren op de PR tenzij een reviewer erom vraagt.
+- Test in eigen HA van gebruiker (via ingebouwde browser, alleen uitlezen): v0.1.3 geladen, 3 afvalsoorten met datums, kalender loopt door in 2027, feestdagen OK. Bug: bestaand apparaat hield fabrikant 'Spaarnelanden' (HA wist weggelaten velden niet). v0.1.4: manufacturer expliciet None + regressietest; 72 tests groen.

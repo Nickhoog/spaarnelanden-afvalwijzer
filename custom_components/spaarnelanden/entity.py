@@ -40,6 +40,9 @@ class SpaarnelandenEntity(CoordinatorEntity[SpaarnelandenCoordinator]):
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, bag_id)},
             name=f"Spaarnelanden {coordinator.config_entry.data[CONF_LABEL]}",
+            # Expliciet leeg: onofficiële integratie, en v0.1.0 zette hier nog
+            # "Spaarnelanden" in het apparaatregister.
+            manufacturer=None,
             entry_type=DeviceEntryType.SERVICE,
         )
 

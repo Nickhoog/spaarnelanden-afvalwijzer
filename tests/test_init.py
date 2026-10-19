@@ -29,3 +29,28 @@ async def test_device_not_attributed_to_spaarnelanden(hass):
     entry = await setup_integration(hass, make_client())
     (device,) = dr.async_entries_for_config_entry(dr.async_get(hass), entry.entry_id)
     assert device.manufacturer is None
+
+
+async def test_existing_manufacturer_is_cleared(hass):
+    """Bestaande apparaten uit v0.1.0 hadden manufacturer 'Spaarnelanden'; die moet weg."""
+    from homeassistant.helpers import device_registry as dr
+
+    from custom_components.spaarnelanden.const import DOMAIN
+
+    from .helpers import BAG, make_entry
+
+    entry = make_entry()
+    entry.add_to_hass(hass)
+    registry = dr.async_get(hass)
+    registry.async_get_or_create(
+        config_entry_id=entry.entry_id,
+        identifiers={(DOMAIN, BAG)},
+        manufacturer="Spaarnelanden",
+    )
+    from unittest.mock import patch
+
+    with patch("custom_components.spaarnelanden.SpaarnelandenClient", return_value=make_client()):
+        await hass.config_entries.async_setup(entry.entry_id)
+        await hass.async_block_till_done()
+    (device,) = dr.async_entries_for_config_entry(registry, entry.entry_id)
+    assert device.manufacturer is None
