@@ -50,3 +50,4 @@
 - v0.1.1: na test in eigen HA toonde het apparaat 'door Spaarnelanden' (manufacturer) — weggehaald, want onofficieel. Regressietest toegevoegd; 71 tests groen. Gepusht + release v0.1.1.
 - v0.1.2: integratienaam (manifest + hacs.json + README) op verzoek gebruiker gewijzigd naar 'Spaarnelanden - Afvalwijzer'. 71 tests groen.
 - v0.1.3: hacs-bot eiste dat 'HACS' niet in de reponaam staat → repo hernoemd naar Nickhoog/spaarnelanden-afvalwijzer (keuze gebruiker); URLs in manifest/README en projectnaam aangepast.
+- HACS-aanmelding: PR https://github.com/hacs/default/pull/12260 (na akkoord gebruiker). Na hernoemen: alle 13 HACS-checks geslaagd, label 'New default repository', in de wachtrij voor review. Niet reageren op de PR tenzij een reviewer erom vraagt.
