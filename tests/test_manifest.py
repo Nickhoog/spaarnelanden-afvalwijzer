@@ -12,7 +12,9 @@ def test_manifest_fields():
     m = json.loads(MANIFEST.read_text(encoding="utf-8"))
     assert m["domain"] == "spaarnelanden"
     assert m["name"] == "Spaarnelanden - Afvalwijzer"
-    assert m["version"] == "0.1.2"
+    assert m["version"] == "0.1.3"
+    assert m["documentation"] == "https://github.com/Nickhoog/spaarnelanden-afvalwijzer"
+    assert m["issue_tracker"] == "https://github.com/Nickhoog/spaarnelanden-afvalwijzer/issues"
     assert m["iot_class"] == "cloud_polling"
     assert m["config_flow"] is True
     assert m["integration_type"] == "service"

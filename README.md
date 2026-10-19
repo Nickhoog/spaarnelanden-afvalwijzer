@@ -16,7 +16,7 @@ Adressen waarvoor Spaarnelanden het afval ophaalt: **Haarlem** en **Zandvoort**.
 
 1. Open HACS in Home Assistant.
 2. Menu (⋮) → **Custom repositories**.
-3. Repository: `https://github.com/Nickhoog/spaarnelanden-hacs`, type **Integration** → **Add**.
+3. Repository: `https://github.com/Nickhoog/spaarnelanden-afvalwijzer`, type **Integration** → **Add**.
 4. Zoek **Spaarnelanden - Afvalwijzer**, klik **Download** en herstart Home Assistant.
 5. **Instellingen → Apparaten & diensten → Integratie toevoegen → Spaarnelanden - Afvalwijzer**.
 
