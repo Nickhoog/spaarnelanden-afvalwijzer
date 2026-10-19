@@ -1,0 +1,40 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Adres",
+        "description": "Vul het adres in waar Spaarnelanden je afval ophaalt (Haarlem of Zandvoort).",
+        "data": {
+          "postcode": "Postcode",
+          "house_number": "Huisnummer"
+        }
+      },
+      "select_address": {
+        "title": "Kies je adres",
+        "description": "Er zijn meerdere adressen met dit huisnummer. Kies het jouwe.",
+        "data": {
+          "bag_id": "Adres"
+        }
+      }
+    },
+    "error": {
+      "invalid_postcode": "Ongeldige postcode (gebruik 1234AB).",
+      "address_not_found": "Geen adres gevonden. Deze integratie werkt alleen voor adressen in Haarlem en Zandvoort.",
+      "cannot_connect": "Kan geen verbinding maken met Spaarnelanden."
+    },
+    "abort": {
+      "already_configured": "Dit adres is al toegevoegd."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "today": { "name": "Vandaag" },
+      "tomorrow": { "name": "Morgen" },
+      "notices": { "name": "Meldingen" }
+    },
+    "calendar": {
+      "waste": { "name": "Afvalkalender" },
+      "holidays": { "name": "Feestdagen en sluitingen" }
+    }
+  }
+}

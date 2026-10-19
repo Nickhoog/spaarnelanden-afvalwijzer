@@ -1,0 +1,40 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Address",
+        "description": "Enter the address where Spaarnelanden collects your waste (Haarlem or Zandvoort).",
+        "data": {
+          "postcode": "Postal code",
+          "house_number": "House number"
+        }
+      },
+      "select_address": {
+        "title": "Choose your address",
+        "description": "Multiple addresses share this house number. Choose yours.",
+        "data": {
+          "bag_id": "Address"
+        }
+      }
+    },
+    "error": {
+      "invalid_postcode": "Invalid postal code (use 1234AB).",
+      "address_not_found": "No address found. This integration only works for addresses in Haarlem and Zandvoort.",
+      "cannot_connect": "Unable to connect to Spaarnelanden."
+    },
+    "abort": {
+      "already_configured": "This address has already been added."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "today": { "name": "Today" },
+      "tomorrow": { "name": "Tomorrow" },
+      "notices": { "name": "Notices" }
+    },
+    "calendar": {
+      "waste": { "name": "Waste calendar" },
+      "holidays": { "name": "Holidays and closures" }
+    }
+  }
+}

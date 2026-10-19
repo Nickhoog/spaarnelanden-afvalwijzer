@@ -1,0 +1,7 @@
+[
+  {"id": 56, "title": "Recyclewagen", "menu_title": "Recyclewagen", "icon": "recyclewagen-line", "ophaaldatum": "2026-11-04", "parent_id": 0, "slug": "recyclewagen", "tags": "", "content": "<p>Tekst</p>", "icon_data": "", "page_title": "Recyclewagen"},
+  {"id": 48, "title": "Gft en etensresten", "menu_title": "Gft en etensresten", "icon": "gft-line", "ophaaldatum": "2026-10-27", "parent_id": 0, "slug": "gft", "tags": "", "content": "", "icon_data": "", "page_title": "Gft"},
+  {"id": 44, "title": "Plastic, blik, drinkpakken & papier (duobak)", "menu_title": "Plastic, blik, drinkpakken & papier (duobak)", "icon": "duocontainer-line", "ophaaldatum": "2026-10-29", "parent_id": 0, "slug": "duobak", "tags": "", "content": "", "icon_data": "", "page_title": "Duobak"},
+  {"id": 42, "title": "Restafval", "menu_title": "Restafval", "icon": "rest2-line", "ophaaldatum": "2026-10-29", "parent_id": 0, "slug": "restafval", "tags": "", "content": "", "icon_data": "", "page_title": "Restafval"},
+  {"id": 39, "title": "Papier en karton", "menu_title": "Papier en karton", "icon": "papier-line", "ophaaldatum": null, "parent_id": 0, "slug": "papier", "tags": "", "content": "", "icon_data": "", "page_title": "Papier"}
+]
