@@ -47,3 +47,4 @@
 - Publicatie (verzoek gebruiker: openbare repo voor HACS): audit op persoonlijke gegevens (alleen openbare GitHub-naam Nickhoog aanwezig); lokale geschiedenis samengevoegd tot één schone commit (eerste commit bevatte echte testadressen); auteur Nickhoog met GitHub-noreply-adres.
 - Op verzoek gebruiker GitHub Actions-workflows (hassfest, HACS-check, pytest) verwijderd; gebruiker test zelf in eigen HA. Eerste run: hassfest en HACS-check waren groen.
 - Op verzoek gebruiker hassfest- en HACS-controle (validate.yml) teruggezet; pytest-workflow blijft weg.
+- v0.1.1: na test in eigen HA toonde het apparaat 'door Spaarnelanden' (manufacturer) — weggehaald, want onofficieel. Regressietest toegevoegd; 71 tests groen. Gepusht + release v0.1.1.

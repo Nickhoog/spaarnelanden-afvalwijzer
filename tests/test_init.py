@@ -20,3 +20,12 @@ async def test_setup_retry_on_error(hass):
     client.get_streams.side_effect = SpaarnelandenConnectionError
     entry = await setup_integration(hass, client)
     assert entry.state is ConfigEntryState.SETUP_RETRY
+
+
+async def test_device_not_attributed_to_spaarnelanden(hass):
+    """Onofficiële integratie: het apparaat mag niet 'door Spaarnelanden' tonen."""
+    from homeassistant.helpers import device_registry as dr
+
+    entry = await setup_integration(hass, make_client())
+    (device,) = dr.async_entries_for_config_entry(dr.async_get(hass), entry.entry_id)
+    assert device.manufacturer is None

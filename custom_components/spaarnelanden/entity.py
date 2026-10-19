@@ -40,7 +40,6 @@ class SpaarnelandenEntity(CoordinatorEntity[SpaarnelandenCoordinator]):
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, bag_id)},
             name=f"Spaarnelanden {coordinator.config_entry.data[CONF_LABEL]}",
-            manufacturer="Spaarnelanden",
             entry_type=DeviceEntryType.SERVICE,
         )
 
