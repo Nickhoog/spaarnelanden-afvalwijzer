@@ -11,7 +11,8 @@ HACS = ROOT / "hacs.json"
 def test_manifest_fields():
     m = json.loads(MANIFEST.read_text(encoding="utf-8"))
     assert m["domain"] == "spaarnelanden"
-    assert m["version"] == "0.1.1"
+    assert m["name"] == "Spaarnelanden - Afvalwijzer"
+    assert m["version"] == "0.1.2"
     assert m["iot_class"] == "cloud_polling"
     assert m["config_flow"] is True
     assert m["integration_type"] == "service"
@@ -28,7 +29,7 @@ def test_manifest_key_order():
 
 def test_hacs_json():
     h = json.loads(HACS.read_text(encoding="utf-8"))
-    assert h == {"name": "Spaarnelanden", "homeassistant": "2026.10.0", "country": "NL"}
+    assert h == {"name": "Spaarnelanden - Afvalwijzer", "homeassistant": "2026.10.0", "country": "NL"}
 
 
 def test_brand_icons():
