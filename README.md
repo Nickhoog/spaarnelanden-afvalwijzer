@@ -14,13 +14,21 @@ Adressen waarvoor Spaarnelanden het afval ophaalt: **Haarlem** en **Zandvoort**.
 
 ## Installatie via HACS
 
-1. Open HACS in Home Assistant.
-2. Menu (⋮) → **Custom repositories**.
-3. Repository: `https://github.com/Nickhoog/spaarnelanden-afvalwijzer`, type **Integration** → **Add**.
-4. Zoek **Spaarnelanden - Afvalwijzer**, klik **Download** en herstart Home Assistant.
-5. **Instellingen → Apparaten & diensten → Integratie toevoegen → Spaarnelanden - Afvalwijzer**.
+[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Nickhoog&repository=spaarnelanden-afvalwijzer&category=integration)
+
+1. Open HACS in Home Assistant en zoek **Spaarnelanden - Afvalwijzer** (of klik op de knop hierboven).
+2. Klik **Download** en herstart Home Assistant.
+3. **Instellingen → Apparaten & diensten → Integratie toevoegen → Spaarnelanden - Afvalwijzer**.
 
 Vereist Home Assistant 2026.10 of nieuwer.
+
+### Alternatief: als custom repository
+
+Vind je de integratie (nog) niet in HACS, voeg hem dan handmatig toe:
+
+1. HACS → menu (⋮) → **Custom repositories**.
+2. Repository: `https://github.com/Nickhoog/spaarnelanden-afvalwijzer`, type **Integration** → **Add**.
+3. Ga verder bij stap 1 hierboven.
 
 ### Handmatig
 
@@ -75,8 +83,9 @@ Vervang de entity-id door die van jouw adres (te vinden onder het apparaat).
 ## English
 
 Unofficial Home Assistant integration for the waste collection calendar of Spaarnelanden
-(Haarlem and Zandvoort, the Netherlands). Install via HACS as a custom repository
-(type *Integration*), add the integration and enter your postal code and house number.
+(Haarlem and Zandvoort, the Netherlands). Install it from HACS by searching for
+*Spaarnelanden - Afvalwijzer* (or, as a fallback, add this repository as a custom repository
+of type *Integration*), then add the integration and enter your postal code and house number.
 It provides a date sensor per waste type, *Today*/*Tomorrow* sensors, a notices sensor,
 a waste calendar and a holidays calendar. UI translations: Dutch and English.
 
