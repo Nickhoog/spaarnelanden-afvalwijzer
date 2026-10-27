@@ -177,6 +177,21 @@ uv run pytest
 Op Windows: `bash scripts/test-windows.sh` (Home Assistant draait niet native op Windows;
 dit script zet lege vervangers voor Unix-modules op het pad).
 
+### Releaseproces (eerst bèta)
+
+Nieuwe features gaan eerst als bèta naar een test-HA, pas daarna naar iedereen:
+
+1. Zet in `custom_components/spaarnelanden/manifest.json` een bèta-versie, bijv. `0.2.0b1`.
+2. Push; hassfest en de HACS-check moeten groen zijn.
+3. Maak een GitHub-release `v0.2.0b1` met **Set as a pre-release** aangevinkt.
+   HACS biedt pre-releases standaard niet aan, dus gewone gebruikers merken er niets van.
+4. Testen in je eigen HA: in HACS heeft elke gedownloade integratie een diagnose-schakelaar
+   **Pre-release** (standaard uitgeschakeld). Schakel die entiteit in en zet hem aan;
+   daarna kun je de bèta downloaden. Herstart HA.
+5. Fout gevonden? Herstel, en ga verder met `0.2.0b2`, enzovoort.
+6. Alles goed? Versie `0.2.0`, normale release `v0.2.0`. Dan krijgt iedereen de update
+   (en toont HACS de README van die release).
+
 Gevonden fout of idee? [Open een issue](https://github.com/Nickhoog/spaarnelanden-afvalwijzer/issues).
 
 ## 📄 Licentie
