@@ -167,17 +167,9 @@ of type *Integration*), then add the integration and enter your postal code and 
 It provides a date sensor per waste type, *Today*/*Tomorrow* sensors, a notices sensor,
 a waste calendar and a holidays calendar. UI translations: Dutch and English.
 
-## 🛠️ Ontwikkeling
+## 🐞 Fout of idee?
 
-```bash
-uv sync
-uv run pytest
-```
-
-Op Windows: `bash scripts/test-windows.sh` (Home Assistant draait niet native op Windows;
-dit script zet lege vervangers voor Unix-modules op het pad).
-
-Gevonden fout of idee? [Open een issue](https://github.com/Nickhoog/spaarnelanden-afvalwijzer/issues).
+[Open een issue](https://github.com/Nickhoog/spaarnelanden-afvalwijzer/issues) op GitHub.
 
 ## 📄 Licentie
 

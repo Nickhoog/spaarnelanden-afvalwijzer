@@ -1,9 +1,13 @@
+# Alleen lokaal (ontwikkeling en interne documentatie): nooit in de publieke repo
 .venv/
 __pycache__/
 .pytest_cache/
 *.pyc
 scratch/
 .superpowers/
-
-# Interne documentatie (logboek, onderzoek, spec, plan): alleen lokaal, nooit publiek
 docs/
+tests/
+scripts/
+pyproject.toml
+uv.lock
+.gitattributes

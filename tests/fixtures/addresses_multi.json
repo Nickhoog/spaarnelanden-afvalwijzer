@@ -1,5 +1,0 @@
-[
-  {"bagId": "0000200000000003", "postcode": "9999ZZ", "huisnummer": 1, "huisletter": "B", "huisnummerToevoeging": "", "openbareRuimteNaam": "Teststraat", "woonplaatsNaam": "Haarlem", "latitude": 52.0, "longitude": 4.0, "woonplaatsId": 1, "gemeenteId": 392},
-  {"bagId": "0000200000000001", "postcode": "9999ZZ", "huisnummer": 1, "huisletter": "", "huisnummerToevoeging": "RD", "openbareRuimteNaam": "Teststraat", "woonplaatsNaam": "Haarlem", "latitude": 52.0, "longitude": 4.0, "woonplaatsId": 1, "gemeenteId": 392},
-  {"bagId": "0000200000000002", "postcode": "9999ZZ", "huisnummer": 1, "huisletter": "A", "huisnummerToevoeging": "", "openbareRuimteNaam": "Teststraat", "woonplaatsNaam": "Haarlem", "latitude": 52.0, "longitude": 4.0, "woonplaatsId": 1, "gemeenteId": 392}
-]
