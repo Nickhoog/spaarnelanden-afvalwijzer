@@ -1,64 +1,96 @@
-# Spaarnelanden afvalkalender voor Home Assistant
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nickhoog/spaarnelanden-afvalwijzer/master/custom_components/spaarnelanden/brand/icon@2x.png" alt="" width="112">
+</p>
 
-Een Home Assistant-integratie (via HACS) die de afvalkalender van
-[Spaarnelanden](https://www.spaarnelanden.nl) in Home Assistant zet: wanneer wordt
-welke container geleegd, plus feestdagen en actuele meldingen.
+<h1 align="center">Spaarnelanden - Afvalwijzer</h1>
 
+<p align="center">
+  De afvalkalender van Spaarnelanden in Home Assistant.<br>
+  Wanneer gaat welke container aan de straat? Nooit meer vergeten.
+</p>
+
+<p align="center">
+  <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-Default-41BDF5?style=flat-square" alt="HACS Default"></a>
+  <a href="https://github.com/Nickhoog/spaarnelanden-afvalwijzer/releases"><img src="https://img.shields.io/github/v/release/Nickhoog/spaarnelanden-afvalwijzer?style=flat-square&label=versie&color=2e8b57" alt="Versie"></a>
+  <img src="https://img.shields.io/badge/Home%20Assistant-2026.10%2B-18BCF2?style=flat-square&logo=homeassistant&logoColor=white" alt="Home Assistant 2026.10+">
+  <img src="https://img.shields.io/badge/regio-Haarlem%20%C2%B7%20Zandvoort-2e8b57?style=flat-square" alt="Haarlem en Zandvoort">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Nickhoog/spaarnelanden-afvalwijzer?style=flat-square&color=lightgrey" alt="MIT"></a>
+</p>
+
+---
+
+## ✨ Wat krijg je?
+
+- 🗑️ **Per afvalsoort de volgende ophaaldatum**: restafval, GFT, duobak, recyclewagen; met het aantal dagen tot ophalen.
+- 📅 **Afvalkalender** met alle ophaaldagen van dit én volgend jaar, gewoon in de kalender van Home Assistant.
+- ⏰ **Vandaag & Morgen**: zie in één oogopslag of er iets aan de straat moet. Ideaal voor een herinnering.
+- 🎄 **Feestdagen en sluitingen**: wanneer het Milieuplein dicht is, als aparte kalender.
+- 📢 **Meldingen** van Spaarnelanden, zoals storingen of gewijzigde ophaaldagen.
+- 🇳🇱 Volledig in het **Nederlands** (en Engels), instellen via de UI met alleen je postcode en huisnummer.
+
+> [!NOTE]
 > **Onofficieel.** Deze integratie is niet gemaakt door of verbonden aan Spaarnelanden.
-> Ze gebruikt dezelfde openbare gegevens als
-> [afvalwijzer.spaarnelanden.nl](https://afvalwijzer.spaarnelanden.nl).
+> Ze gebruikt dezelfde openbare gegevens als [afvalwijzer.spaarnelanden.nl](https://afvalwijzer.spaarnelanden.nl).
 
-## Ondersteunde gemeenten
+## 📦 Installatie
 
-Adressen waarvoor Spaarnelanden het afval ophaalt: **Haarlem** en **Zandvoort**.
+[![Open je Home Assistant en toon deze integratie in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Nickhoog&repository=spaarnelanden-afvalwijzer&category=integration)
 
-## Installatie via HACS
+1. Open **HACS** in Home Assistant en zoek **Spaarnelanden - Afvalwijzer**, of klik op de knop hierboven.
+2. Klik **Download** en **herstart** Home Assistant.
+3. Ga naar **Instellingen → Apparaten & diensten → Integratie toevoegen** en kies **Spaarnelanden - Afvalwijzer**.
 
-[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Nickhoog&repository=spaarnelanden-afvalwijzer&category=integration)
+Vereist Home Assistant **2026.10** of nieuwer.
 
-1. Open HACS in Home Assistant en zoek **Spaarnelanden - Afvalwijzer** (of klik op de knop hierboven).
-2. Klik **Download** en herstart Home Assistant.
-3. **Instellingen → Apparaten & diensten → Integratie toevoegen → Spaarnelanden - Afvalwijzer**.
+<details>
+<summary><b>Alternatief: als custom repository toevoegen</b></summary>
 
-Vereist Home Assistant 2026.10 of nieuwer.
-
-### Alternatief: als custom repository
-
-Vind je de integratie (nog) niet in HACS, voeg hem dan handmatig toe:
+Vind je de integratie niet in HACS?
 
 1. HACS → menu (⋮) → **Custom repositories**.
 2. Repository: `https://github.com/Nickhoog/spaarnelanden-afvalwijzer`, type **Integration** → **Add**.
 3. Ga verder bij stap 1 hierboven.
 
-### Handmatig
+</details>
 
-Kopieer `custom_components/spaarnelanden` naar de map `config/custom_components/` van je
+<details>
+<summary><b>Handmatig installeren (zonder HACS)</b></summary>
+
+Kopieer de map `custom_components/spaarnelanden` naar `config/custom_components/` van je
 Home Assistant en herstart.
 
-## Configuratie
+</details>
 
-Vul je **postcode** en **huisnummer** in. Hebben meerdere adressen hetzelfde huisnummer
-(bijv. 1A, 1B, 1 RD), dan kies je daarna je adres uit een lijst. Meerdere adressen
-toevoegen kan: voeg de integratie gewoon nog een keer toe.
+## ⚙️ Instellen
 
-## Entities
+1. Vul je **postcode** en **huisnummer** in (spaties en kleine letters mogen, `2011 vb` werkt ook).
+2. Hebben meerdere adressen hetzelfde huisnummer (bijv. 1A, 1B, 1 RD)? Dan kies je daarna je adres uit een lijst.
+3. Klaar. Meer adressen? Voeg de integratie gewoon nog een keer toe.
 
-Per adres komt er één apparaat "Spaarnelanden ‹adres›" met:
+**Werkt voor** alle adressen waar Spaarnelanden het afval ophaalt: **Haarlem** en **Zandvoort**.
 
-| Entity | Status | Attributen |
+## 🧩 Entities
+
+Per adres komt er één apparaat **Spaarnelanden ‹adres›** met:
+
+| Entity | Waarde | Extra informatie |
 |---|---|---|
-| Sensor per afvalsoort (bijv. *Gft en etensresten*, *Restafval*, *Plastic, blik, drinkpakken & papier (duobak)*, *Recyclewagen*) | datum van de eerstvolgende ophaling | `dagen_tot`, `afvalsoort`, `afvalstroom_id` |
-| Vandaag | afvalsoorten die vandaag worden opgehaald, of `Geen` | `afvalsoorten` |
-| Morgen | afvalsoorten die morgen worden opgehaald, of `Geen` | `afvalsoorten` |
-| Meldingen | aantal actuele meldingen | `meldingen` (titel + tekst) |
-| Kalender *Afvalkalender* | alle ophaaldata van dit en volgend jaar | |
-| Kalender *Feestdagen en sluitingen* | feestdagen waarop o.a. het Milieuplein dicht is | |
+| 🗑️ **Sensor per afvalsoort** | datum van de volgende ophaling | `dagen_tot`, `afvalsoort`, `afvalstroom_id` |
+| ⏰ **Vandaag** | wat er vandaag wordt opgehaald, of `Geen` | `afvalsoorten` (lijst) |
+| ⏰ **Morgen** | wat er morgen wordt opgehaald, of `Geen` | `afvalsoorten` (lijst) |
+| 📢 **Meldingen** | aantal actuele meldingen | `meldingen` (titel en tekst) |
+| 📅 **Afvalkalender** | alle ophaaldagen, dit en volgend jaar | |
+| 🎄 **Feestdagen en sluitingen** | feestdagen en sluitingsdagen | |
 
-Er komt alleen een sensor voor afvalsoorten die op jouw adres een ophaaldatum hebben.
-De gegevens worden elke 12 uur ververst; na middernacht schuiven "Vandaag", "Morgen" en
+Je krijgt alleen sensoren voor afvalsoorten die op jouw adres echt worden opgehaald.
+De gegevens worden elke 12 uur ververst, en na middernacht schuiven *Vandaag*, *Morgen* en
 `dagen_tot` vanzelf door.
 
-## Voorbeeld: herinnering de avond ervoor
+## 💡 Voorbeelden
+
+Vervang `teststraat_1_haarlem` hieronder door jouw adres; de exacte entity-id's vind je onder het apparaat.
+
+### Herinnering de avond ervoor
 
 ```yaml
 automation:
@@ -75,21 +107,67 @@ automation:
     actions:
       - action: notify.notify
         data:
+          title: "🗑️ Afval buiten zetten"
           message: "Morgen wordt opgehaald: {{ states('sensor.spaarnelanden_teststraat_1_haarlem_morgen') }}"
 ```
 
-Vervang de entity-id door die van jouw adres (te vinden onder het apparaat).
+### Dashboardkaart
 
-## English
+Een simpele kaart die de komende ophalingen op volgorde toont:
 
-Unofficial Home Assistant integration for the waste collection calendar of Spaarnelanden
-(Haarlem and Zandvoort, the Netherlands). Install it from HACS by searching for
+```yaml
+type: markdown
+title: Afval
+content: |
+  {%- set ns = namespace(rows=[]) %}
+  {%- for s in states.sensor
+       if s.entity_id.startswith('sensor.spaarnelanden_teststraat_1_haarlem_')
+       and s.attributes.dagen_tot is defined and s.attributes.dagen_tot is not none %}
+    {%- set ns.rows = ns.rows + [s] %}
+  {%- endfor %}
+  {%- for s in ns.rows | sort(attribute='attributes.afvalsoort') | sort(attribute='attributes.dagen_tot') %}
+  {%- set d = s.attributes.dagen_tot %}
+  - **{{ s.attributes.afvalsoort }}**: {{ 'vandaag' if d == 0 else 'morgen' if d == 1 else 'over ' ~ d ~ ' dagen' }}
+  {%- endfor %}
+```
+
+## ❓ Veelgestelde vragen
+
+<details>
+<summary><b>Mijn adres wordt niet gevonden</b></summary>
+
+Controleer of Spaarnelanden op jouw adres het afval ophaalt (Haarlem of Zandvoort) en of
+het adres op [afvalwijzer.spaarnelanden.nl](https://afvalwijzer.spaarnelanden.nl) wel werkt.
+Gebruik je postcode zonder huisletter; de letter of toevoeging kies je in de volgende stap.
+
+</details>
+
+<details>
+<summary><b>Ik zie geen sensor voor papier of glas</b></summary>
+
+Er komen alleen sensoren voor afvalsoorten die bij jouw adres worden opgehaald. Brengvoorzieningen
+zoals ondergrondse containers en glasbakken hebben geen ophaaldag.
+
+</details>
+
+<details>
+<summary><b>Wat gebeurt er als de website van Spaarnelanden even niet bereikbaar is?</b></summary>
+
+De sensoren en kalenders blijven de laatst opgehaalde gegevens tonen; bij de volgende
+verversing wordt het automatisch bijgewerkt.
+
+</details>
+
+## 🇬🇧 English
+
+Unofficial Home Assistant integration for the waste collection calendar of **Spaarnelanden**
+(Haarlem and Zandvoort, the Netherlands). Install it from **HACS** by searching for
 *Spaarnelanden - Afvalwijzer* (or, as a fallback, add this repository as a custom repository
 of type *Integration*), then add the integration and enter your postal code and house number.
 It provides a date sensor per waste type, *Today*/*Tomorrow* sensors, a notices sensor,
 a waste calendar and a holidays calendar. UI translations: Dutch and English.
 
-## Ontwikkeling
+## 🛠️ Ontwikkeling
 
 ```bash
 uv sync
@@ -99,6 +177,8 @@ uv run pytest
 Op Windows: `bash scripts/test-windows.sh` (Home Assistant draait niet native op Windows;
 dit script zet lege vervangers voor Unix-modules op het pad).
 
-## Licentie
+Gevonden fout of idee? [Open een issue](https://github.com/Nickhoog/spaarnelanden-afvalwijzer/issues).
 
-MIT
+## 📄 Licentie
+
+[MIT](LICENSE)
